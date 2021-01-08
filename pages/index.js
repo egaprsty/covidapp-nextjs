@@ -17,24 +17,22 @@ class App extends Component {
   render(){
     const { items } = this.state
     return(
-
+      
       <div className="justify-items-start md:justify-items-center">
-        <h1 className="bg-red-400">World wide</h1>
+        <h1 className="bg-blue-400 text-center">COVID19</h1>
+        <br />
         { items.map((item, index) => 
         <tr> 
-          <table class="table-fixed">
-  <thead>
-    <tr>
+      <div className="shadow ml-20 text-center mr-3">
     {item.attributes.Country_Region}
-    </tr>
-    </thead>
-    </table>
+    </div>
+          
             <th key={index}>     
-              <td className="bg-blue-200">{item.attributes.Confirmed}</td>
-              <br/>
-              <td className="text-center">{item.attributes.Deaths}</td>
-              </th> 
-              
+                <td className="bg-blue-200">{item.attributes.Confirmed}</td>
+                  <br/>
+                <td className="bg-red-200">{item.attributes.Deaths}</td>
+              </th>
+                       
         </tr>
         )}
       </div>
